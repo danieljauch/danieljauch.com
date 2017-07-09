@@ -1,0 +1,14 @@
+body {
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  perspective: 1200px;
+  font: {
+    family: 'Roboto Mono', arial, sans-serif;
+    size: 16px;
+  }
+  background: $black;
+  * {
+    box-sizing: border-box;
+  }
+}

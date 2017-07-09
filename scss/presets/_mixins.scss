@@ -1,0 +1,14 @@
+@mixin pseudo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin breakpoint ($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+@mixin clip-path ($poly1, $poly2, $poly3, $poly4) {
+  -webkit-clip-path: polygon($poly1, $poly2, $poly3, $poly4);
+  clip-path: polygon($poly1, $poly2, $poly3, $poly4);
+}

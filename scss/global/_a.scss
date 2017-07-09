@@ -1,0 +1,37 @@
+a {
+  position: relative;
+  color: darken($blue, 10%);
+  text-decoration: none;
+  font-weight: bold;
+  transition: {
+    property: color;
+    duration: .2s;
+    timing-function: $cubic;
+  }
+  &[data-tooltip="true"]:after {
+    content: attr(data-tooltip-content);
+    color: $blue;
+    position: absolute;
+    width: 6rem;
+    top: 2.5rem;
+    left: -3rem;
+    text-align: center;
+    filter: opacity(0) blur(5px);
+    transform: translateY(-.25rem);
+    transition: {
+      property: filter, transform;
+      duration: .5s;
+      timing-function: $cubic;
+    }
+  }
+  &:hover, &:focus {
+    color: darken($blue, 20%);
+    &[data-tooltip="true"]:after {
+      filter: opacity(1) blur(0);
+      transform: translateY(0);
+    }
+  }
+  &:visited {
+    color: darken($blue, 10%);
+  }
+}

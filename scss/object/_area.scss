@@ -1,0 +1,163 @@
+.main-area {
+  box-shadow: 0 -.25rem 1rem rgba($black, .5);
+  .wrap {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    header {
+      nav {
+        display: none;
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .subarea-carousel {
+      position: relative;
+      .subarea {
+        width: 100%;
+        padding-top: 1rem;
+        transition: {
+          property: filter, transform;
+          duration: .2s;
+          timing-function: $cubic;
+        }
+        figure {
+          // max-height: 25vh;
+          background: rgba($black, .1);
+          padding: 1rem;
+          img {
+            max-height: 20vh;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  &:nth-of-type(odd) {
+    color: $white;
+    background: lighten($black, 10%) url('../img/asfalt-light2.png');
+    header {
+      text-align: right;
+      h4 {
+        border-bottom: .25rem solid rgba($white, .75);
+      }
+    }
+  }
+  &:nth-of-type(even) {
+    color: $black;
+    background: darken($white, 10%) url('../img/asfalt-dark.png');
+    header {
+      h4 {
+        border-bottom: .25rem solid rgba($black, .75);
+      }
+    }
+  }
+  @include breakpoint ($desktop) {
+    .wrap {
+      height: 100vh;
+      overflow: hidden;
+      padding: 2rem;
+      flex-direction: row;
+      header {
+        flex: 25% 1;
+        nav {
+          display: block;
+        }
+      }
+      .subarea-carousel {
+        flex: 70% 3;
+        .subarea {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-top: -2rem;
+          padding-top: 2rem;
+          filter: opacity(0) blur(5px);
+          z-index: -1;
+          transform: translate(-1rem);
+          &.active {
+            filter: opacity(1) blur(0);
+            z-index: 2;
+            transform: translate(0);
+          }
+          h5 {
+            font-size: 8rem;
+            margin: -5rem;
+            height: 10.625rem; /* 170/16 */
+          }
+          .content {
+            .content-display {
+              display: flex;
+              p {
+                flex: 70% 3;
+              }
+              a {
+                flex: 25% 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(odd) {
+      header {
+        order: 2;
+        margin-left: 1rem;
+      }
+      .subarea-carousel {
+        order: 1;
+        margin-right: 1rem;
+        .subarea h5 {
+          color: rgba($white, .25);
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      header {
+        order: 1;
+        margin-right: 1rem;
+      }
+      .subarea-carousel {
+        order: 2;
+        margin-left: 1rem;
+        .subarea h5 {
+          color: rgba($black, .25);
+        }
+      }
+    }
+  }
+  &#intro {
+    padding: 9rem 1rem;
+    background: {
+      color: $black;
+      image: url('../img/background-dark.jpg');
+      size: auto;
+      repeat: no-repeat;
+    }
+    .title-left {
+      flex: 60% 2;
+      text-align: right;
+      padding-right: 2rem;
+    }
+    .title-right {
+      flex-grow: 1;
+      img {
+        float: right;
+      }
+    }
+    @include breakpoint($desktop) {
+      padding: 10%;
+      background: {
+        size: cover;
+        position: right;
+      }
+      img {
+        float: none;
+      }
+    }
+  }
+}
