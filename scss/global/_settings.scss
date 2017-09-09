@@ -10,5 +10,8 @@ body {
   background: $black;
   * {
     box-sizing: border-box;
+    *:focus {
+      outline: none;
+    }
   }
 }
