@@ -16,19 +16,21 @@ a {
     top: 2.5rem;
     left: -3rem;
     text-align: center;
-    filter: opacity(0) blur(5px);
-    transform: translateY(-.25rem);
+    opacity: 0;
+    transform: translateY(-.25rem) translateZ(0);
+    pointer-events: none;
     transition: {
-      property: filter, transform;
+      property: opacity, transform;
       duration: .5s;
       timing-function: $cubic;
     }
   }
   &:hover, &:focus {
-    color: darken($blue, 20%);
+    color: darken($blue, 5%);
     &[data-tooltip="true"]:after {
-      filter: opacity(1) blur(0);
-      transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+      pointer-events: inherit;
     }
   }
   &:visited {
