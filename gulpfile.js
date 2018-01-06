@@ -1,15 +1,17 @@
+// General
 const gulp = require('gulp');
+const util = require('gulp-util');
+const plumber = require('gulp-plumber');
+const watch = require('gulp-watch');
+const browserSync = require('browser-sync').create();
 // CSS
 const compass = require('gulp-compass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-// General
-const plumber = require('gulp-plumber');
-const watch = require('gulp-watch');
-const util = require('gulp-util');
 
-gulp.task('css', () => {
-  gulp.src('scss/**/*.scss')
+gulp.task('css', _ => {
+  return gulp
+    .src('scss/**/*.scss')
     .pipe(compass({
       sass: 'scss',
       css: 'css'
@@ -21,9 +23,16 @@ gulp.task('css', () => {
     }))
     .pipe(plumber())
     .pipe(cleanCSS())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.stream());
 });
-gulp.task('watch', () => {
+gulp.task('browser-sync', ['css'], _ => {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+
   gulp.watch('scss/**/*.scss', ['css']);
 });
-gulp.task('default', ['watch']);
+gulp.task('default', ['browser-sync']);
