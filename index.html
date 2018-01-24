@@ -16,10 +16,10 @@
   <div class="modals">
     <div class="modal-back"></div>
     <section class="tracker-modal modal">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/hxx6J2RPgyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/hxx6J2RPgyQ" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
     </section>
     <section class="workbench-modal modal">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/Pmrl0Etjjz8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/Pmrl0Etjjz8" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
     </section>
   </div>
   <header class="site-header">
@@ -73,6 +73,15 @@
         <h2>Hi, I'm</h2>
         <h1>Daniel Jauch</h1>
         <h3>Web Developer</h3>
+        <div class="title-reveal title-reveal-1">
+          <a href="#apps" class="apps-pointer pointer">See my apps</a>
+        </div>
+        <div class="title-reveal title-reveal-2">
+          <a href="#sites" class="sites-pointer pointer">See my sites</a>
+        </div>
+        <div class="title-reveal title-reveal-3">
+          <a href="#contact" class="contact-pointer pointer">Get in touch</a>
+        </div>
       </div>
       <!-- <div class="title-right">
         <img class="headshot" alt="That's my face" src="http://res.cloudinary.com/dpyrrchd4/image/upload/c_scale,h_150,q_50,w_150/v1449197335/2015-12-01_1809_b9d604.jpg">
@@ -96,13 +105,13 @@
             <header><h5>Services I offer</h5></header>
             <div class="content">
               <h6>web applications</h6>
-              <div>
+              <div class="content-reveal">
                 <p>I create applications in <a href="https://nodejs.org/" target="_blank">NodeJS</a> and <a href="https://reactjs.org/" target="_blank">React</a>.</p>
                 <p>My favorite examples are from my time at City of Tacoma, and the apps are on their network, but you can see video demos <a href="#apps" class="apps-pointer">here</a>.</p>
                 <p>You can also see what I'm currently working on <a href="#now" class="now-pointer">here</a>.</p>
               </div>
               <h6>websites</h6>
-              <div>
+              <div class="content-reveal">
                 <p>I've worked with a few CMS's as well as creating static sites from scratch (like this one).</p>
                 <p>Sites I've worked on in <a href="https://www.drupal.org/" target="_blank">Drupal</a>:</p>
                 <ul>
@@ -126,7 +135,7 @@
             <header><h5>Web Apps</h5></header>
             <div class="content">
               <h6>fee estimator</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>This project is currently hosted on <a href="http://tacomapermits.org/pds-resource-library/fee-estimator">City of Tacoma's permit site</a> as the estimation calculator for permit fees.</p>
                 <a href="http://tacomapermits.org/pds-resource-library/fee-estimator">
                   <figure>
@@ -138,7 +147,7 @@
                 </a>
               </div>
               <h6>tracker</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>An internal-only app built on <a href="https://www.accela.com/">Accela's</a> API for monitoring customer's progress in the lobby when meeting with multiple individuals.</p>
                 <a href="#tracker-modal-open" class="tracker-modal-open modal-open">
                   <figure>
@@ -150,11 +159,11 @@
                 </a>
               </div>
               <h6>workbench</h6>
-              <div>
+              <div class="content-reveal">
                 <p>A Trello-style Scrum board that uses Microsoft's SharePoint Services API. You can see a demo <a href="#workbench-modal-open" class="workbench-modal-open modal-open">here</a>.</p>
               </div>
               <h6>queue monitor</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>City of Tacoma's Queue system for the lobby based off of the people checked in on Tracker.</p>
                 <figure>
                   <img src="img/queue-monitor.png" alt="Queue Monitor">
@@ -169,7 +178,7 @@
             <header><h5>Websites</h5></header>
             <div class="content">
               <h6>greeley downtown</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>I assisted <a href="https://www.variantstudios.com/"></a>Variant Studios</a> in Fort Collins, CO with <a href="http://www.greeleydowntown.com/">Greeley, CO's downtown site</a>.</p>
                 <a href="http://www.greeleydowntown.com/">
                   <figure>
@@ -181,7 +190,7 @@
                 </a>
               </div>
               <h6>the nbm show</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>Another project from when I was with <a href="https://www.variantstudios.com/"></a>Variant Studios</a>, the <a href="https://thenbmshow.com/">NBM Show</a> was one of many sites for this company where I helped with creation and animations.</p>
                 <a href="https://thenbmshow.com/">
                   <figure>
@@ -193,7 +202,7 @@
                 </a>
               </div>
               <h6>roadrunner kids</h6>
-              <div class="content-display">
+              <div class="content-display content-reveal">
                 <p>Another project from when I was with <a href="https://www.variantstudios.com/">Variant Studios</a>, <a href="http://www.roadrunnersports.com/rrs/kids/">Roadrunner Kids</a> was one of many sites for this company where I helped with creation and animations.</p>
                 <a href="http://www.roadrunnersports.com/rrs/kids/">
                   <figure>
@@ -208,7 +217,7 @@
           </div>
           <div class="subarea" id="now">
             <header><h5>Right Now</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>Magic: the Gathering Deck Constructor</h6>
               <div>
                 <p>If you can't tell how much of a nerd I am yet, I also play a popular card game called <a href="https://magic.wizards.com/en">Magic: The Gathering</a>.</p>
@@ -236,7 +245,7 @@
         <article class="subarea-carousel">
           <div class="subarea active" id="tacoma">
             <header><h5>City of Tacoma</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>management analyst</h6>
               <p>My official title with City of Tacoma's Planning and Development Services was Management Analyst where I assisted with the integration of Accela into their permitting system.</p>
               <p>I helped develop (in Javascript as well as a Javascript-built proprietary language) functions of the app to better work with the Tacoma process.</p>
@@ -248,7 +257,7 @@
           </div>
           <div class="subarea" id="variant">
             <header><h5>Variant Studios</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>jekyll and drupal cms</h6>
               <p>I've worked with a few CMS's both custom and pre-existing.</p>
               <p><b>Static CMS:</b> Jekyll was the tool I used most for static, server-built CMS's and my personal favorite for building sites. This work included creating template partials with the Liquid templating language (based off of ruby).</p>
@@ -262,7 +271,7 @@
           </div>
           <div class="subarea" id="atbs">
             <header><h5>Automated Ticket Broker Solutions</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>templating</h6>
               <p>My primary duty was updating ATBS's website templates to future-proof, responsive, and up-to-date code.</p>
               <p>I also created a full SCSS library for mixins of classes used with variants for different color schemes and layouts.</p>
@@ -287,7 +296,7 @@
         <article class="subarea-carousel">
           <div class="subarea active" id="html">
             <header class="main-subarea-header"><h5>HTML</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>html5 tags</h6>
               <p>I'm more than familiar with every modern HTML tag as well as how to create backward-compatible code to fill in support for what's missing with CSS or JavaScript.</p>
               <h6>aria roles</h6>
@@ -296,7 +305,7 @@
           </div>
           <div class="subarea" id="css">
             <header class="main-subarea-header"><h5>CSS</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>css3</h6>
               <p>I include as many forward-facing properties as the design would relate to while also creating fallbacks for any browser needed.</p>
               <h6>animations</h6>
@@ -308,7 +317,7 @@
           </div>
           <div class="subarea" id="js">
             <header class="main-subarea-header"><h5>JavaScript</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>large-scale, maintainable code</h6>
               <p>No matter how much my code does, if it can't be read, it can't be helpful. I'm the least sentimental coder you'll find. I have no problem ruthlessly stripping code chunks because it doesn't work in the bigger picture.</p>
               <p>Everything I make is meant to be passed on, shared, and copy / pasted for future use.</p>
@@ -322,7 +331,7 @@
           </div>
           <div class="subarea" id="other">
             <header class="main-subarea-header"><h5>Other</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>sql</h6>
               <p>I have light reporting experience pulling from SQL databases through Oracle for use in Crystal Reports.</p>
               <h6>php</h6>
@@ -346,7 +355,7 @@
         <article class="subarea-carousel">
           <div class="subarea active" id="contact">
             <header class="main-subarea-header"><h5>Contact</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>get in touch</h6>
               <form action="https://formspree.io/daniel.p.jauch@gmail.com" method="POST">
                   <input type="text" name="name" placeholder="Your name / company">
@@ -363,7 +372,7 @@
           </div>
           <div class="subarea" id="bio">
             <header class="main-subarea-header"><h5>Bio</h5></header>
-            <div class="content">
+            <div class="content content-reveal">
               <h6>my history</h6>
               <p>I don't have a degree. My knowledge comes from being willing and hard-working enough to reach out and find the information for myself. I hold a firm belief that the best way to learn something is to do it.</p>
               <h6>my present</h6>
@@ -378,9 +387,7 @@
   </main>
   <script src="https://use.fontawesome.com/bf7c42290d.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <!-- <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script> -->
-  <!-- https://cdn.jsdelivr.net/jquery.snapscroll/0.1/jquery.snapscroll.min.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.8/jquery.scrollify.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

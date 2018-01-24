@@ -147,6 +147,17 @@
       flex: 60% 2;
       text-align: right;
       padding-right: 2rem;
+      .title-reveal a {
+        color: $white;
+        transition: {
+          property: color;
+          duration: .2s;
+          timing-function: $cubic;
+        }
+        &:hover {
+          color: rgba($white, .9);
+        }
+      }
     }
     .title-right {
       flex-grow: 1;
