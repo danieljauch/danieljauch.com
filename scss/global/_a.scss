@@ -10,7 +10,7 @@ a {
   }
   &[data-tooltip="true"]:after {
     content: attr(data-tooltip-content);
-    color: $blue;
+    color: $white;
     position: absolute;
     width: 6rem;
     top: 2.5rem;

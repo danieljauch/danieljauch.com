@@ -1,5 +1,6 @@
 .main-area {
   box-shadow: 0 -.25rem 1rem rgba($black, .5);
+  min-height: 100vh;
   .wrap {
     padding: 1rem;
     display: flex;
@@ -20,12 +21,11 @@
         width: 100%;
         padding-top: 1rem;
         transition: {
-          property: filter, transform, opacity;
+          property: transform, opacity;
           duration: .2s;
           timing-function: $cubic;
         }
         figure {
-          // max-height: 25vh;
           background: rgba($black, .1);
           padding: 1rem;
           img {
@@ -76,13 +76,11 @@
           left: 0;
           margin-top: -2rem;
           padding-top: 2rem;
-          filter: blur(5px);
           opacity: 0;
           z-index: -1;
           transform: translateX(-1rem) translateZ(0);
           pointer-events: none;
           &.active {
-            filter: blur(0);
             opacity: 1;
             z-index: 2;
             transform: translateX(0) translateZ(0);
@@ -94,6 +92,8 @@
             height: 10.625rem; /* 170/16 */
           }
           .content {
+            max-height: 90vh;
+            overflow: auto;
             .content-display {
               display: flex;
               p {

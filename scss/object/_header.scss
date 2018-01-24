@@ -40,12 +40,11 @@
           width: 10rem;
           font-weight: normal;
           z-index: 3;
-          filter: blur(5px);
           opacity: 0;
           transform: translateY(-.25rem) translateZ(0);
           pointer-events: none;
           transition: {
-            property: filter, transform, opacity;
+            property: transform, opacity;
             duration: .5s;
             timing-function: $cubic;
           }
@@ -57,7 +56,6 @@
         &:hover {
           padding-bottom: 5rem;
           .submenu {
-            filter: blur(0);
             opacity: 1;
             transform: translateY(0) translateZ(0);
             pointer-events: inherit;

@@ -13,12 +13,22 @@
 
 <body>
   <!--[if lte IE10]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+  <div class="modals">
+    <div class="modal-back"></div>
+    <section class="tracker-modal modal">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/hxx6J2RPgyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+    <section class="workbench-modal modal">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/Pmrl0Etjjz8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+  </div>
   <header class="site-header">
     <nav>
       <ul class="menu">
         <li class="menu-item">
           <a href="#work" class="work-pointer pointer">my work</a>
           <ul class="submenu">
+            <li class="submenu-item"><a href="#services" class="services-pointer pointer">services i offer</a></li>
             <li class="submenu-item"><a href="#apps" class="apps-pointer pointer">web apps</a></li>
             <li class="submenu-item"><a href="#sites" class="sites-pointer pointer">websites</a></li>
             <li class="submenu-item"><a href="#now" class="now-pointer pointer">right now</a></li>
@@ -44,8 +54,8 @@
         <li class="menu-item">
           <a href="#about" class="about-pointer pointer">about me</a>
           <ul class="submenu">
-            <li class="submenu-item"><a href="#bio" class="bio-pointer pointer">bio</a></li>
             <li class="submenu-item"><a href="#contact" class="contact-pointer pointer">contact</a></li>
+            <li class="submenu-item"><a href="#bio" class="bio-pointer pointer">bio</a></li>
           </ul>
         </li>
       </ul>
@@ -74,6 +84,7 @@
           <h4>My Work</h4>
           <nav>
             <ul>
+              <li><a href="#services" class="services-pointer pointer">Services I Offer</a></li>
               <li><a href="#apps" class="apps-pointer pointer">Web Apps</a></li>
               <li><a href="#sites" class="sites-pointer pointer">Websites</a></li>
               <li><a href="#now" class="now-pointer pointer">Right Now</a></li>
@@ -81,7 +92,37 @@
           </nav>
         </header>
         <article class="subarea-carousel">
-          <div class="subarea active" id="apps">
+          <div class="subarea active" id="services">
+            <header><h5>Services I offer</h5></header>
+            <div class="content">
+              <h6>web applications</h6>
+              <div>
+                <p>I create applications in <a href="https://nodejs.org/" target="_blank">NodeJS</a> and <a href="https://reactjs.org/" target="_blank">React</a>.</p>
+                <p>My favorite examples are from my time at City of Tacoma, and the apps are on their network, but you can see video demos <a href="#apps" class="apps-pointer">here</a>.</p>
+                <p>You can also see what I'm currently working on <a href="#now" class="now-pointer">here</a>.</p>
+              </div>
+              <h6>websites</h6>
+              <div>
+                <p>I've worked with a few CMS's as well as creating static sites from scratch (like this one).</p>
+                <p>Sites I've worked on in <a href="https://www.drupal.org/" target="_blank">Drupal</a>:</p>
+                <ul>
+                  <li><a href="https://thenbmshow.com/" target="_blank">The NBM Show</a></li>
+                  <li><a href="https://fossilcreeknursery.com/" target="_blank">Fossil Creek Nursery</a></li>
+                  <li><a href="https://www.pioneer-engineering.com" target="_blank">Pioneer Engineering</a></li>
+                </ul>
+                <p>Sites I've worked on in <a href="https://cloudcannon.com/" target="_blank">CloudCannon</a>:</p> 
+                <ul>
+                  <li><a href="http://kaizenibba.com/" target="_blank">Kaizen IBBA</a></li>
+                  <li><a href="http://www.greeleydowntown.com/" target="_blank">Greeley Downtown</a></li>
+                  <li><a href="http://www.roadrunnersports.com/rrs/kids/" target="_blank">Roadrunner Sports - Kids</a></li>
+                  <li><a href="http://frontrangefirerescue.co/" target="_blank">Front Range Fire Rescue</a></li>
+                  <li><a href="http://www.bjcsteel.com/" target="_blank">Big Johnson Construction</a></li>
+                </ul>
+                <p>I've also worked with custom CMS's made from PHP and small experience with WordPress.</p>
+              </div>
+            </div>
+          </div>
+          <div class="subarea" id="apps">
             <header><h5>Web Apps</h5></header>
             <div class="content">
               <h6>fee estimator</h6>
@@ -99,7 +140,7 @@
               <h6>tracker</h6>
               <div class="content-display">
                 <p>An internal-only app built on <a href="https://www.accela.com/">Accela's</a> API for monitoring customer's progress in the lobby when meeting with multiple individuals.</p>
-                <a href="#">
+                <a href="#tracker-modal-open" class="tracker-modal-open modal-open">
                   <figure>
                     <img src="img/tracker.png" alt="Tracker">
                     <figcaption>
@@ -108,17 +149,19 @@
                   </figure>
                 </a>
               </div>
+              <h6>workbench</h6>
+              <div>
+                <p>A Trello-style Scrum board that uses Microsoft's SharePoint Services API. You can see a demo <a href="#workbench-modal-open" class="workbench-modal-open modal-open">here</a>.</p>
+              </div>
               <h6>queue monitor</h6>
               <div class="content-display">
                 <p>City of Tacoma's Queue system for the lobby based off of the people checked in on Tracker.</p>
-                <a href="#">
-                  <figure>
-                    <img src="img/queue-monitor.png" alt="Queue Monitor">
-                    <figcaption>
-                      <div>An example screenshot.</div>
-                    </figcaption>
-                  </figure>
-                </a>
+                <figure>
+                  <img src="img/queue-monitor.png" alt="Queue Monitor">
+                  <figcaption>
+                    <div>An example screenshot.</div>
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -167,9 +210,9 @@
             <header><h5>Right Now</h5></header>
             <div class="content">
               <h6>Magic: the Gathering Deck Constructor</h6>
-              <div class="">
+              <div>
                 <p>If you can't tell how much of a nerd I am yet, I also play a popular card game called <a href="https://magic.wizards.com/en">Magic: The Gathering</a>.</p>
-                <p>Part of the game is building a deck from the long library of cards that the game offers, which can be a daunting task now that it's been around since '93'.</p>
+                <p>Part of the game is building a deck from the long library of cards that the game offers, which can be a daunting task now that it's been around since '93.</p>
                 <p>I'm building a React app that helps find the cards for the type of deck you would like to play by searching their card search API and gathering web data from popular posted decklists to build you the deck that suits you best.</p>
                 <p>See my progress <a href="https://github.com/danieljauch/mtg-deck-builder">here</a>.</p>
               </div>
@@ -295,24 +338,13 @@
           <h4>About Me</h4>
           <nav class="area-header-menu">
             <ul>
-              <li><a href="#bio" class="bio-pointer pointer">Bio</a></li>
               <li><a href="#contact" class="contact-pointer pointer">Contact</a></li>
+              <li><a href="#bio" class="bio-pointer pointer">Bio</a></li>
             </ul>
           </nav>
         </header>
         <article class="subarea-carousel">
-          <div class="subarea active" id="bio">
-            <header class="main-subarea-header"><h5>Bio</h5></header>
-            <div class="content">
-              <h6>my history</h6>
-              <p>I don't have a degree. My knowledge comes from being willing and hard-working enough to reach out and find the information for myself. I hold a firm belief that the best way to learn something is to do it.</p>
-              <h6>my present</h6>
-              <p>Now that I have a few years of experience under my belt, I have developed regular habits for finding new techniques. I subscribe and regularly read mutliple web development blogs, newsletters, etc. to make sure my skills are current and constantly evolving.</p>
-              <h6>my future</h6>
-              <p>Design? Development? There are a lot of ways my skills can be used, and I'm excited to find out what that looks like. Right now I'm interested in web applications for start ups. If you know a good one, <a href="#contact" class="contact-pointer pointer">give me a shout</a>.</p>
-            </div>
-          </div>
-          <div class="subarea" id="contact">
+          <div class="subarea active" id="contact">
             <header class="main-subarea-header"><h5>Contact</h5></header>
             <div class="content">
               <h6>get in touch</h6>
@@ -323,10 +355,21 @@
                   <input type="submit" value="Send">
               </form>
               <h6>find me</h6>
-              <p><a href="http://codepen.io/collection/DbNaRW/">CodePen</a></p>
-              <p><a href="https://twitter.com/basemntspaceshp">Twitter</a></p>
-              <p><a href="https://bitbucket.org/danieljauch/">BitBucket</a></p>
-              <p><a href="https://github.com/danieljauch">GitHub</a></p>
+              <p><a href="http://codepen.io/collection/DbNaRW/"><i class="fa fa-codepen"></i> CodePen</a></p>
+              <p><a href="https://twitter.com/basemntspaceshp"><i class="fa fa-twitter"></i> Twitter</a></p>
+              <p><a href="https://bitbucket.org/danieljauch/"><i class="fa fa-bitbucket"></i> BitBucket</a></p>
+              <p><a href="https://github.com/danieljauch"><i class="fa fa-github-alt"></i> GitHub</a></p>
+            </div>
+          </div>
+          <div class="subarea" id="bio">
+            <header class="main-subarea-header"><h5>Bio</h5></header>
+            <div class="content">
+              <h6>my history</h6>
+              <p>I don't have a degree. My knowledge comes from being willing and hard-working enough to reach out and find the information for myself. I hold a firm belief that the best way to learn something is to do it.</p>
+              <h6>my present</h6>
+              <p>Now that I have a few years of experience under my belt, I have developed regular habits for finding new techniques. I subscribe and regularly read mutliple web development blogs, newsletters, etc. to make sure my skills are current and constantly evolving.</p>
+              <h6>my future</h6>
+              <p>Design? Development? There are a lot of ways my skills can be used, and I'm excited to find out what that looks like. Right now I'm interested in web applications for start ups. If you know a good one, <a href="#contact" class="contact-pointer pointer">give me a shout</a>.</p>
             </div>
           </div>
         </article>
