@@ -1,0 +1,12 @@
+.site__main {
+  background: $body-bg;
+
+  @include breakpoint($tablet) {
+    margin-left: 17rem;
+  }
+
+
+  @include breakpoint($desktop) {
+    margin-left: 20rem;
+  }
+}

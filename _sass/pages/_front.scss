@@ -1,0 +1,14 @@
+.front-page {
+  .card__wrap {
+    margin: -4rem auto 1rem;
+  }
+
+  .front-page-post {
+    @include spacer-with-border('top', 1rem, .5rem, rgba($black, .1));
+  }
+
+  .latest-blog-post-title {
+    text-align: center;
+    font-weight: $bold-weight;
+  }
+}

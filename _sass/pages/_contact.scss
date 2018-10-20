@@ -1,0 +1,11 @@
+.contact-form {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+}
+
+input, textarea {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: $card-shadow;
+}

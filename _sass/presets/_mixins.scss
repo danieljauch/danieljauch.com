@@ -1,0 +1,108 @@
+// --- Sizing ---
+@mixin size($width: 100%, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin space($padding: 0, $margin: 0 auto) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin spacer-with-border($direction, $spacer-width, $border-width, $border-color, $border-style: solid) {
+  padding-#{$direction}: $spacer-width;
+  border-#{$direction}: $border-width $border-style $border-color;
+  margin-#{$direction}: $spacer-width;
+}
+
+// --- Lists ---
+@mixin pseudo-list {
+  @include space(0, 0);
+
+  list-style-type: none;
+}
+
+@mixin inline-list {
+  @include pseudo-list;
+
+  li {
+    display: inline-block;
+  }
+}
+
+@mixin inline-flex {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@mixin inline-flex-list {
+  @include pseudo-list;
+  @include inline-flex;
+}
+
+@mixin alternating-list {
+  @include pseudo-list;
+
+  li {
+    padding: .5rem .5rem;
+
+    &:not(:last-of-type) {
+      border-bottom: .5rem solid rgba($black, .1);
+    }
+
+    &:nth-of-type(odd) {
+      background: rgba($white, .5);
+    }
+
+    &:nth-of-type(even) {
+      background: rgba($black, .5);
+    }
+  }
+}
+
+// --- Box-shape ---
+@mixin square($dim) {
+  @include size($dim, $dim);
+}
+
+@mixin circle($dim) {
+  @include square($dim);
+
+  border-radius: 50%;
+}
+
+@mixin circle-photo-wrap($dim) {
+  @include circle($dim);
+
+  overflow: hidden;
+  background: {
+    color: rgba($black, .1);
+    size: cover;
+  };
+}
+
+// --- Background ---
+@mixin menu-back {
+  background: $menu-background;
+  box-shadow: $menu-shadow;
+}
+
+// --- Hiding ---
+@mixin do-not-show {
+  position: absolute;
+  top: -1000vh;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// --- Responsiveness ---
+@mixin breakpoint($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}

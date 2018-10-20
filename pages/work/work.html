@@ -1,0 +1,76 @@
+---
+layout: page
+title: My Work
+description:
+permalink: /work/
+---
+
+<div class="work-page">
+  <section class="portfolio-wrap">
+    {% assign portfolio = site.portfolios | sort: 'weight' %}
+    {% for item in portfolio %}
+      <article class="portfolio-item">
+        <a href="{{ item.url }}" class="portfolio-link">
+          <figure class="portfolio-image-wrap">
+            <img src="{{ item.image_path }}" alt="{{ item.title }}" class="portfolio-image">
+            <figcaption class="portfolio-caption">
+              <div class="portfolio-name">{{ item.title }}</div>
+              <ul class="portfolio__tags tag-wrap">
+                <li class="tag">{{ item.tag }}</li>
+              </ul>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+    {% endfor %}
+  </section>
+
+  <div class="card__wrap">
+    <article class="card">
+      <header class="card__header">
+        <h3 class="card__title">Web design</h3>
+      </header>
+      <div class="card__content-wrap">
+        <p>Most of my career has been in web design rather than development. Though development is my true passion, I'm partial to front end development. The fun of crafting CSS to look just right makes all the difference to me.</p>
+      </div>
+    </article>
+    <article class="card">
+      <header class="card__header">
+        <h3 class="card__title">Web Apps</h3>
+      </header>
+      <div class="card__content-wrap">
+        <p>My first applications were built from scratch in NodeJS at City of Tacoma's Planning and Development Services department.</p>
+      </div>
+    </article>
+    <article class="card">
+      <header class="card__header">
+        <h3 class="card__title">Buzzwords</h3>
+      </header>
+      <div class="card__content-wrap">
+        <p>Languages I use regularly:</p>
+        <ul>
+          <li>JavaScript (ES6)</li>
+          <li>JSX</li>
+          <li>HTML</li>
+          <li>CSS (Sass)</li>
+          <li>Ruby</li>
+        </ul>
+        <p>Frameworks:</p>
+        <ul>
+          <li>React</li>
+          <li>Node JS</li>
+          <li>Webpack</li>
+          <li>Ruby on Rails</li>
+        </ul>
+      </div>
+    </article>
+    <article class="card">
+      <header class="card__header">
+        <h3 class="card__title">Download my resume</h3>
+      </header>
+      <div class="card__content-wrap">
+        <p><a class="btn download-btn" href="/doc/Resume.pdf" target="_blank">Click for PDF</a></p>
+      </div>
+    </article>
+  </div>
+</div>

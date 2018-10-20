@@ -1,0 +1,26 @@
+linters:
+  BemDepth:
+    enabled: true
+  ChainedClasses:
+    enabled: true
+  HexLength:
+    enabled: false
+  PrivateNamingConvention:
+    enabled: true
+  PropertySortOrder:
+    enabled: false
+  PropertyUnits:
+    global: ['em', 'rem', '%', 'fr', 'vh', 'vw']
+    properties:
+      line-height: []
+      margin: ['em', 'rem']
+      font-size: ['em', 'rem']
+  QualifyingElement:
+    allow_element_with_attribute: true
+  SelectorFormat:
+    convention: hyphenated_BEM
+    ignored_types: id
+  TrailingZero:
+    enabled: true
+  TransitionAll:
+    enabled: true

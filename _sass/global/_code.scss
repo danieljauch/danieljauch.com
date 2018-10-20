@@ -1,0 +1,10 @@
+code {
+  padding: .5rem .5rem;
+  background: rgba($black, .05);
+  border-radius: .5rem;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}

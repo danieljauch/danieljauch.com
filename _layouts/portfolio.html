@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<main class="site__main portfolio">
+  <header class="page__header portfolio__content-header">
+    <h1 class="page__title portfolio__title">{{ page.title }}</h1>
+  </header>
+
+  <section class="page__content post__content-area">
+    <div class="back-wrap">
+      <a href="/work/" class="btn back-btn">
+        <i class="fa fa-angle-left"></i>
+        <span> Back to work</span>
+      </a>
+    </div>
+
+    <article class="card portfolio__content full-width-card">
+      {% if page.image_path %}
+        <img src="{{ page.image_path }}" alt="{{ page.title }}" class="portfolio__image">
+      {% endif %}
+
+      <div class="portfolio__content">{{ content }}</div>
+    </article>
+
+    <footer class="portfolio__footer">
+      <ul class="portfolio__tags tag-wrap horizontal-tag-list">
+        {% for tag in page.tags %}
+          <li class="tag">#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </footer>
+  </section>
+</main>

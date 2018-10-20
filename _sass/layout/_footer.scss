@@ -1,0 +1,39 @@
+.site__footer {
+  @include size(100%, 12rem);
+
+  position: absolute;
+  top: -12rem;
+  left: 0;
+  opacity: 0;
+  z-index: 11;
+  color: rgba($white, .5);
+  transition: {
+    property: top, opacity;
+    duration: $fast;
+    timing-function: $cubic;
+  };
+
+  .copy {
+    @include spacer-with-border('top', .5rem, .5rem, rgba($white, .5));
+  }
+
+  &.open {
+    top: calc(100vh - 14rem);
+    opacity: 1;
+  }
+
+  @include breakpoint($tablet) {
+    @include size(calc(100% - 2rem), auto);
+
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    text-align: left;
+    font-size: .9rem;
+    opacity: 1;
+
+    &.open {
+      top: auto;
+    }
+  }
+}

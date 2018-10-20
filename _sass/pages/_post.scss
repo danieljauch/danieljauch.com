@@ -1,0 +1,36 @@
+.post__prose {
+  width: 100%;
+  margin: 0 auto .5rem;
+  font-size: 1em;
+  line-height: 1.4;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 .5em;
+  }
+
+  p {
+    margin: 0 0 .5em;
+  }
+
+  b {
+    font-weight: $bold-weight;
+  }
+
+  hr {
+    max-width: 25rem;
+    border: .5rem dashed rgba($black, .5);
+  }
+
+  @include breakpoint($tablet) {
+    padding: 1em 3em;
+    font-size: 1.25em;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0 .5em;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+  }
+}

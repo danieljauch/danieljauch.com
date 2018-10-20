@@ -1,0 +1,75 @@
+.top-nav {
+  position: relative;
+}
+
+.menu {
+  @include pseudo-list;
+  @include size(100%, calc(100vh - 2.25rem));
+
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  opacity: 0;
+  z-index: 10;
+  background: rgba($black, .9);
+  transition: {
+    property: top, opacity;
+    duration: $fast;
+    timing-function: $cubic;
+  };
+
+  &.open {
+    top: 2.25rem;
+    opacity: 1;
+  }
+
+  &__item {
+    border-radius: .5rem;
+    transition: {
+      property: background;
+      duration: $fast;
+      timing-function: $cubic;
+    };
+
+    &:hover {
+      background: rgba(darken($blue, 25%), .5);
+
+      .menu__icon {
+        color: $white;
+      }
+    }
+  }
+
+  &__link {
+    @include space(.5rem, 0 0 .5rem);
+
+    display: block;
+  }
+
+  &__icon {
+    color: rgba(lighten($blue, 10%), .9);
+    transition: {
+      property: color;
+      duration: $fast;
+      timing-function: $cubic;
+    };
+  }
+
+  &__toggle {
+    position: relative;
+    padding: .5rem;
+    height: 2.25rem;
+    z-index: 15;
+  }
+
+  @include breakpoint($tablet) {
+    position: relative;
+    background: transparent;
+    top: 0;
+    opacity: 1;
+
+    &__toggle {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# Site settings
+title: Daniel Jauch ~ Web Development Blog and Portfolio
+email: daniel.p.jauch@gmail.com
+description: >-
+  Daniel Jauch - Full stack web developer capable with Ruby on Rails and React among many other
+  front end and back end frameworks.
+baseurl: "/"
+url: "https://danieljauch.com"
+twitter_username: basemntspaceshp
+github_username:  danieljauch
+bitbucket_username:  danieljauch
+
+collections:
+  portfolios:
+    output: true
+    url: /portfolio/:title/
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,15 @@
+<div class="menu__toggle">
+  <span>Menu </span>
+  <i class="fa fa-bars"></i>
+</div>
+{% assign navurl = page.url | remove: 'index.html' %}
+<ul class="menu">
+  {% for item in include.nav %}
+    <li class="menu__item">
+			<a href="{{ item.url }}" class="menu__link{% if item.url == navurl %} active{% endif %}">
+				<i class="menu__icon fa fa-{{ item.icon }}"></i>
+				<div class="menu__item-label">{{ item.text }}</div>
+			</a>
+    </li>
+  {% endfor %}
+</ul>

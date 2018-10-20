@@ -1,0 +1,15 @@
+- text: Home
+  url: /
+  icon: "home"
+- text: About Me
+  url: /about/
+  icon: "user-circle"
+- text: Blog
+  url: /blog/
+  icon: "comment"
+- text: My Work
+  url: /work/
+  icon: "list"
+- text: Get in Touch
+  url: /contact/
+  icon: "envelope-open"

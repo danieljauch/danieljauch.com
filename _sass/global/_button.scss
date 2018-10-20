@@ -1,0 +1,57 @@
+button,
+.btn {
+  background: $blue;
+  color: $white;
+  padding: .5em;
+  cursor: pointer;
+  border: 0;
+  border-radius: .5em;
+  text-transform: uppercase;
+  transition: {
+    property: color;
+    duration: $fast;
+    timing-function: $cubic;
+  };
+
+  a,
+  a:visited,
+  &:visited {
+    color: $white;
+  }
+
+  &:focus,
+  &:hover {
+    color: $white;
+
+    a,
+    a:hover,
+    a:focus {
+      color: $white;
+    }
+  }
+
+  &:active,
+  &.active {
+    a,
+    a:active {
+      color: $white;
+    }
+  }
+
+  &.square-btn {
+    border-radius: 0;
+  }
+
+  .btn-lite {
+    background: $white;
+    color: $blue;
+    border: .5rem solid $blue;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
+  }
+}

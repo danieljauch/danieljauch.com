@@ -1,0 +1,10 @@
+.tag-wrap {
+  @include inline-list;
+
+  .tag {
+    @include space(.25rem .5rem, 0 .5rem .5rem 0);
+
+    background: rgba($black, .1);
+    border-radius: .5rem;
+  }
+}

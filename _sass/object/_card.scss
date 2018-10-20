@@ -1,0 +1,72 @@
+.card {
+  @include space(1rem, 0 0 1rem);
+
+  background: $white;
+  box-shadow: $card-shadow;
+
+  p {
+    margin: 0 0 .5rem;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    margin: (-4rem) auto 4rem;
+  }
+
+  &__header {
+    @include spacer-with-border('bottom', .5rem, .25rem, rgba($blue, .5), dotted);
+  }
+
+  &__title {
+    font-weight: $bold-weight;
+    margin-bottom: .5rem;
+  }
+
+  &__subtitle {
+    color: rgba($black, .5);
+    padding-left: 1rem;
+  }
+
+  &__content-wrap {
+    color: lighten($black, 15%);
+  }
+
+  &__footer {
+    @include spacer-with-border('top', .5rem, .25rem, rgba($black, .1), dotted);
+    @include inline-flex;
+
+    font-size: .8rem;
+
+    .card__tags {
+      @include inline-list;
+    }
+
+    .card__date {
+      color: rgba($black, .5);
+    }
+  }
+
+  @include breakpoint($tablet) {
+    margin: .5rem;
+    flex: 45% 1;
+
+    &.full-width-card {
+      flex: 100% 4;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      @include spacer-with-border('bottom', .5rem, .25rem, rgba($blue, .5), dotted);
+    }
+  }
+
+  @include breakpoint($desktop) {
+    flex: 30% 1;
+  }
+}

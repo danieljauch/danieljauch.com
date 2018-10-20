@@ -1,0 +1,85 @@
+---
+layout: page
+title: "Home"
+---
+
+<div class="front-page">
+  <div class="card__wrap">
+    <article class="card">
+      <a class="card__link" href="/about">
+        <header class="card__header">
+          <h3 class="card__title">Learn about me</h3>
+        </header>
+        <div class="card__content-wrap">
+          <p>Read about my opinions, see what kind of work I like to do, and just get to know me as a person.</p>
+        </div>
+      </a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="/blog">
+        <header class="card__header">
+          <h3 class="card__title">Read my blog</h3>
+        </header>
+        <div class="card__content-wrap">
+          <p>I try to post fairly frequently about new developments in web technology that I'm learning about and sometimes other things that I like.</p>
+        </div>
+      </a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="/work">
+        <header class="card__header">
+          <h3 class="card__title">See my work</h3>
+        </header>
+        <div class="card__content-wrap">
+          <p>See examples of my websites, web apps, and learn about the work that I like to do.</p>
+        </div>
+      </a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="/contact">
+        <header class="card__header">
+          <h3 class="card__title">Reach out</h3>
+        </header>
+        <div class="card__content-wrap">
+          <p>Send me an email, give me a call. Let's do great work together.</p>
+        </div>
+      </a>
+    </article>
+  </div>
+
+  <h3 class="latest-blog-post-title">Latest Blog Post</h3>
+
+  <div class="card__wrap front-page-post">
+    {% assign post = site.posts.first %}
+    <article class="card">
+      <a class="card__link" href="{{ post.url }}">
+        <header class="card__header">
+          <h3 class="card__title">{{ post.title }}</h3>
+          {% if post.subtitle %}<h4 class="card__subtitle">{{ post.subtitle }}</h4>{% endif %}
+        </header>
+
+        <div class="card__content-wrap">
+          {% if post.image_path %}
+            <figure class="card__image-wrap">
+              <img src="{{ post.image_path }}" alt="{{ post.title }}" class="card__image">
+              <figcaption class="card__description-wrap">
+                <div class="card__description">{{ post.description }}</div>
+              </figcaption>
+            </figure>
+          {% else %}
+            <div class="card__description">{{ post.description }}</div>
+          {% endif %}
+        </div>
+
+        <footer class="card__footer">
+          <ul class="card__tags tag-wrap horizontal-tag-list">
+            {% for tag in post.tags %}
+              <li class="tag">#{{ tag }}</li>
+            {% endfor %}
+          </ul>
+          <div class="card__date">Date: {{ post.date | date: '%B %d, %Y' }}</div>
+        </footer>
+      </a>
+    </article>
+  </div>
+</div>

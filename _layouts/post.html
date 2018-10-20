@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<main class="site__main post">
+  <header class="page__header post__content-header">
+    <h1 class="page__title post__title">{{ page.title }}</h1>
+  </header>
+
+  <section class="page__content post__content-area">
+    <div class="back-wrap">
+      <a href="/blog/" class="btn back-btn">
+        <i class="fa fa-angle-left"></i>
+        <span> Back to blog</span>
+      </a>
+    </div>
+    
+    <article class="card post__prose full-width-card">
+      {% if page.subtitle %}
+        <header class="post__header">
+          <h3 class="post__subtitle">{{ page.subtitle }}</h3>
+        </header>
+      {% endif %}
+  
+      {% if page.image_path %}
+        <img src="{{ page.image_path }}" alt="{{ page.title }}" class="post__image">
+      {% endif %}
+  
+      <div class="post__content">{{ content }}</div>
+    </article>
+
+    <footer class="post__footer">
+      <ul class="post__tags tag-wrap horizontal-tag-list">
+        {% for tag in page.tags %}
+          <li class="tag">#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      <div class="post__date">Date: {{ page.date | date: '%B %d, %Y' }}</div>
+    </footer>
+  </section>
+</main>

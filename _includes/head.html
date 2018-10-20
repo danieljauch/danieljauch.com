@@ -1,0 +1,64 @@
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+	<link rel="canonical" href="{{ page.url | prepend:site.url }}" />
+	<link rel="shortlink" href="{{ page.url | prepend:site.url }}" />
+	<meta name="robots" content="follow, index" />
+
+	<title>
+		{% if page.title %}
+			 {{ site.title }} : {{ page.title }}
+		{% else %}
+			{{ site.title }}
+		{% endif %}
+	</title>
+
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' | escape }}{% else %}{{ site.keywords }}{% endif %}"/>
+
+	<meta name="google-site-verification" content="B7sNiJPxLSv5BgVhWJiO-5te2mDHFXc6dJBpcAdB0as" />
+	<!-- Open Graph -->
+	<meta property="og:url" content="{{ page.url | prepend:site.url }}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}
+			{{ site.title }}{% endif %}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{ site.description }}{% endif %}" />
+	
+	{% if page.path contains '_posts' %}
+		<link rel="alternate" type="application/atom+xml" title="{{ site.title }} Blog" href="/atom.xml" />
+	{% endif %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4285f4">
+	<meta name="msapplication-TileColor" content="#4285f4">
+	<meta name="theme-color" content="#4285f4">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/style.css" media="screen" />
+
+	<script type="application/ld+json" src="./LD.json">
+		{
+			"@context": "http://schema.org",
+			"sameAs": [
+				"https://www.facebook.com/ibba.fc/",
+				"https://www.youtube.com/channel/UCkcOTCK82WIFTDpETiy1OJQ"
+			]
+		}
+	</script>
+
+	{% if site.google_analytics_tracking_id %}
+	  <script>
+	    (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+	    ga("create", "{{ site.google_analytics_tracking_id }}", "auto");
+	    ga("send", "pageview");
+	  </script>
+	{% endif %}
+</head>

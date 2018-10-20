@@ -1,0 +1,43 @@
+.social {
+  &__main-label {
+    @include spacer-with-border('bottom', .5rem, .25rem, rgba($yellow, .5));
+
+    display: inline-block;
+    color: rgba($yellow, .9);
+    font-weight: bold;
+  }
+
+  &__list {
+    @include pseudo-list;
+  }
+
+  &__link {
+    &:hover {
+      &__label {
+        color: $blue;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    color: rgba($blue, .9);
+    width: 5rem;
+    transition: {
+      property: color;
+      duration: $fast;
+      timing-function: $cubic;
+    };
+  }
+
+  @include breakpoint($tablet) {
+    &__main-label {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+
+    &__list-item {
+      padding-right: 1rem;
+    }
+  }
+}

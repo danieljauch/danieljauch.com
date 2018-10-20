@@ -1,0 +1,21 @@
+pre {
+  @include space(.5rem 1rem, .5rem 0);
+
+  position: relative;
+  border-radius: .5rem;
+  background: rgba($black, .05);
+  overflow: hidden;
+
+  &:before {
+    @include size(.5rem, 100%);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .5rem;
+    height: 100%;
+    background: rgba($blue, .1);
+    border-right: .125rem solid rgba($blue, .5);
+  }
+}

@@ -1,0 +1,51 @@
+/* --- COLORS --- */
+// Base colors
+$black: #000;
+$white: #fff;
+
+// Color palate
+$blue: #4285f4;
+$yellow: #fcff3b;
+
+// Area colors
+$body-bg: darken(#f8fafb, 10%);
+$header-bg: lighten($black, 10%);
+
+/* [end colors] */
+
+// Timing functions
+$cubic: cubic-bezier(.73, .2, .3, 1);
+$loader-time: 2s;
+$very-fast: .1s;
+$fast: .2s;
+$medium: .5s;
+$slow: 1s;
+
+// Weights
+$light-weight: 300;
+$default-weight: 400;
+$bold-weight: 700;
+$h1-weight: 300;
+$h2-weight: 400;
+
+// Shadows
+$taper-shadow: .5rem .5rem .5rem rgba($black, .5);
+$card-shadow: 0 .5rem 1rem -0.5rem rgba($black, .5);
+
+/* --- BREAKPOINTS --- */
+//  20em = 320/16
+$phone: 20em;
+
+//  32em = 512/16
+$phone-down: 32em;
+
+//  48em = 768/16
+$tablet: 48em;
+
+//  60em = 960/16
+$desktop: 60rem;
+
+//  75em = 1200/16
+$desktop-large: 75em;
+
+/* [end breakpoints] */

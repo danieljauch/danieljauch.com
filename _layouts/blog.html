@@ -1,0 +1,38 @@
+---
+layout: page
+---
+
+<div class="blog-page-content card__wrap">
+  {% for post in site.posts %}
+    <article class="card">
+      <a class="card__link" href="{{ post.url }}">
+        <header class="card__header">
+          <h3 class="card__title">{{ post.title }}</h3>
+          {% if post.subtitle %}<h4 class="card__subtitle">{{ post.subtitle }}</h4>{% endif %}
+        </header>
+
+        <div class="card__content-wrap">
+          {% if post.image_path %}
+            <figure class="card__image-wrap">
+              <img src="{{ post.image_path }}" alt="{{ post.title }}" class="card__image">
+              <figcaption class="card__description-wrap">
+                <div class="card__description">{{ post.description }}</div>
+              </figcaption>
+            </figure>
+          {% else %}
+            <div class="card__description">{{ post.description }}</div>
+          {% endif %}
+        </div>
+
+        <footer class="card__footer">
+          <ul class="card__tags tag-wrap horizontal-tag-list">
+            {% for tag in post.tags %}
+              <li class="tag">#{{ tag }}</li>
+            {% endfor %}
+          </ul>
+          <div class="card__date">Date: {{ post.date | date: '%B %d, %Y' }}</div>
+        </footer>
+      </a>
+    </article>
+  {% endfor %}
+</div>

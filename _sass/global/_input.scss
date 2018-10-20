@@ -1,0 +1,145 @@
+@mixin placeholder {
+  color: lighten($black, 25%);
+  color: rgba($black, .5);
+  font-style: italic;
+}
+
+input,
+select,
+textarea {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 100%;
+  padding: .25rem .5rem;
+  background: rgba($white, .9);
+  border: .125em solid $blue;
+  box-shadow: $card-shadow;
+  font: {
+    size: 1rem;
+    family: 'Lato', arial, sans-serif;
+  };
+  transition: {
+    property: background, border-color;
+    duration: $fast;
+    timing-function: $cubic;
+  };
+
+  &:focus {
+    background: $white;
+  }
+
+  &:disabled {
+    background: rgba($black, .5);
+    border: .125em solid rgba($black, .5);
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100rem $white inset;
+  }
+
+  &::-webkit-input-placeholder {
+    @include placeholder;
+  }
+
+  &::-moz-placeholder {
+    @include placeholder;
+  }
+
+  &:-ms-input-placeholder {
+    @include placeholder;
+  }
+}
+
+input[type='file'] {
+  position: absolute;
+  z-index: -1;
+  top: -100vh;
+  left: 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  cursor: pointer;
+  width: 1rem !important;
+  height: 1rem;
+  border: .125em solid $blue;
+
+  &:checked {
+    background: darken($blue, 10%);
+  }
+}
+
+input[type='radio'] {
+  border-radius: 50%;
+}
+
+input[type='range'] {
+  background: rgba($black, .1);
+  cursor: pointer;
+  height: .5rem;
+  margin: 1rem 0 .5rem;
+}
+
+input[type='range']::-ms-track {
+  cursor: pointer;
+  color: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  @include circle(2rem);
+
+  -webkit-appearance: none;
+  background: $white;
+  box-shadow: 0 .5rem .5rem rgba($black, .5);
+}
+
+input[type='range']::-ms-thumb {
+  @include circle(1rem);
+
+  cursor: pointer;
+  background: $white;
+  box-shadow: $card-shadow;
+}
+
+input[type='range']::-ms-fill-lower {
+  background: $blue;
+}
+
+input[type='range']::-ms-fill-upper {
+  background: rgba($black, .1);
+}
+
+input[type='hidden'] {
+  @include do-not-show;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 11.5rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+.select-wrap {
+  position: relative;
+
+  .form-input {
+    position: relative;
+    z-index: 2;
+  }
+
+  .drop-down-icon {
+    position: relative;
+    z-index: 1;
+    width: 2rem;
+    text-align: center;
+    color: rgba($black, .5);
+    float: right;
+    margin-top: -1rem;
+  }
+}

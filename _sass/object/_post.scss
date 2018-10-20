@@ -1,0 +1,42 @@
+.post {
+  &__content-header {
+    padding: 1rem 1rem 5rem;
+  }
+
+  &__header,
+  &__content {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto 1rem;
+  }
+
+  &__header {
+    @include spacer-with-border('bottom', .5rem, .25rem, rgba($blue, .5), dashed);
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+  }
+
+  &__footer {
+    @include spacer-with-border('top', .5rem, .25rem, rgba($black, .1), dotted);
+    @include inline-flex;
+
+    .post__tags {
+      @include inline-list;
+    }
+
+    .post__date {
+      color: rgba($black, .5);
+    }
+  }
+
+  &__content-area {
+    min-height: 50vh;
+
+    .back-wrap {
+      height: 2rem;
+      font-size: .8rem;
+    }
+  }
+}
