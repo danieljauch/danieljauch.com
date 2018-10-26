@@ -1,0 +1,14 @@
+image: ruby:2.5
+
+pipelines:
+  default:
+    - step:
+        name: Generate the blog with Jekyll
+        caches:
+          - bundler
+        script:
+          - bundle install --path vendor/bundle
+          - bundle exec jekyll build --destination public
+definitions:
+  caches:
+    bundler: vendor/bundle
