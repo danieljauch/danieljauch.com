@@ -9,6 +9,13 @@ pipelines:
         script:
           - bundle install --path vendor/bundle
           - bundle exec jekyll build --destination public
+    - step:
+        name: Deploy to S3
+        deployment: production
+        # trigger: manual  # uncomment to have a manual step
+        image: atlassian/pipelines-awscli
+        script:
+          - aws s3 sync --delete . s3://danieljauch.com
 definitions:
   caches:
     bundler: vendor/bundle
