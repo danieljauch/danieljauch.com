@@ -123,7 +123,7 @@ class AlertProvider extends Component {
 
   render() {
     return (
-      <AlertContext.Provider value={{ state: this.state }}>
+      <AlertContext.Provider value={ { state: this.state } }>
         {this.props.children}
       </AlertContext.Provider>
     )
@@ -222,11 +222,11 @@ class AlertProvider extends Component {
   render() {
     return (
       <AlertContext.Provider
-        value={{
+        value={ {
           state: this.state,
           createAlert: this.createAlert,
           dismissAlert: this.dismissAlert
-        }}>
+        } }>
         {this.props.children}
       </AlertContext.Provider>
     )
