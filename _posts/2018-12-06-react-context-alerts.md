@@ -2,7 +2,7 @@
 layout: post
 title: "Using React Context API to make app-level alerts"
 description: "My journey with the Context API and making alerts that go between pages."
-date: 2018-11-28
+date: 2018-12-06
 tags: webdev react js
 published: true
 ---
